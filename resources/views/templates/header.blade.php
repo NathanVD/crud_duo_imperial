@@ -33,6 +33,7 @@
           </ul>
         </li>
         <li><a href="#contact">Contact Us</a></li>
+        <li><a href="/admin" class="text-warning">Admin</a></li>
       </ul>
     </nav>
     <!-- #nav-menu-container -->
