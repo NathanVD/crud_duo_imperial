@@ -12,7 +12,7 @@
       <div class="col-md-3 col-md-push-2">
         <div class="info">
           <div>
-            <i class="fa fa-map-marker"></i>
+            <i class="fa fa-map-marker-alt"></i>
             <p>A108 Adam Street<br>New York, NY 535022</p>
           </div>
 

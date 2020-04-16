@@ -18,5 +18,19 @@
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0",
         "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0",
+        "animate.css": "^3.7.2",
+        "bootstrap": "^4.4.1",
+        "easing": "^1.2.1",
+        "hoverintent": "^2.2.1",
+        "jquery": "^3.5.0",
+        "jquery-sticky": "^1.0.4",
+        "morphext": "^2.4.7",
+        "popper": "^1.0.1",
+        "popper.js": "^1.16.1",
+        "superfish": "^1.7.10",
+        "wow.js": "^1.2.2"
     }
 }
