@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Subscribe;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +14,7 @@ use App\Subscribe;
 */
 
 Route::get('/', function () {
-
-    $subscribeLink = Subscribe::find(1);
-
-    return view('index',compact('subscribeLink'));
+    return view('index');
 });
 
 Route::get('/admin', function () {

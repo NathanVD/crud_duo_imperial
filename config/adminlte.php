@@ -237,7 +237,7 @@ return [
         ],
         [
             'text' => 'Section Subscribe',
-            // 'url' => '/admin/subscribe',
+            'url' => '/admin/subscribe',
             'icon' => 'far fa-question-circle'
         ],
         
