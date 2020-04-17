@@ -227,7 +227,7 @@ return [
         ],
         [
             'text' => 'Section About',
-            // 'url' => '/admin/about',
+            'url' => '/admin/about',
             'icon' => 'far fa-question-circle'
         ],
         [

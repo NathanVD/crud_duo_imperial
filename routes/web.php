@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Hero;
+use App\About;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,9 @@ use App\Hero;
 */
 
 Route::get('/', function () {
+    $about = About::find(1);
     $hero = Hero::find(1);
-    return view('index', compact('hero'));
+    return view('index', compact('hero', 'about'));
 });
 
 Route::get('/admin', function () {
@@ -28,3 +30,6 @@ Route::get('/admin', function () {
 
 Route::get('/admin/hero', 'HeroController@edit')->name('hero');
 Route::post('/admin/hero/update', 'HeroController@update')->name('hero.update');
+
+Route::get('/admin/about', 'AboutController@edit')->name('about');
+Route::post('/admin/about/update', 'AboutController@update')->name('about.update');
