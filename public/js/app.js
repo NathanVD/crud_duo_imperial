@@ -49483,6 +49483,17 @@ jQuery(document).ready(function ($) {
 
 /***/ }),
 
+/***/ "./resources/sass/admin_custom.sass":
+/*!******************************************!*\
+  !*** ./resources/sass/admin_custom.sass ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49495,14 +49506,15 @@ jQuery(document).ready(function ($) {
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin_custom.sass ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/sass/admin_custom.sass */"./resources/sass/admin_custom.sass");
 
 
 /***/ }),

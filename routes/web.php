@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Subscribe;
 use App\Service;
+use App\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,9 @@ Route::get('/', function () {
 
     $subscribeLink = Subscribe::find(1);
     $services = Service::all();
+    $testimonials = Testimonial::all();
 
-    return view('index',compact('subscribeLink','services'));
+    return view('index',compact('subscribeLink','services','testimonials'));
 });
 
 Route::get('/admin', function () {
@@ -33,3 +35,6 @@ Route::post('/admin/subscribe/update', 'SubscribeController@update')->name('subs
 
 //Services (admin)
 Route::resource('/admin/services', 'ServiceController');
+
+//Testimonials (admin)
+Route::resource('/admin/testimonials', 'TestimonialController');

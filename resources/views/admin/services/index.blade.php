@@ -24,7 +24,7 @@
           <tbody>
             @if ($services->isEmpty())
                 <tr>
-                  <td colspan="6" class="text-center"><b>Aucun service proposé</b></td>
+                  <td colspan="6" class="text-center"><b>No service proposed</b></td>
                 </tr>
             @else 
               @foreach ($services as $service)

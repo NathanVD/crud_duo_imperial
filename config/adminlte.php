@@ -249,7 +249,7 @@ return [
         ],
         [
             'text' => 'Testimonials',
-            // 'url' => '/admin/testimonials',
+            'url' => '/admin/testimonials',
             'icon' => 'far fa-comments'
         ],
 
