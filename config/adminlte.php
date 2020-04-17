@@ -231,11 +231,6 @@ return [
             'icon' => 'far fa-question-circle'
         ],
         [
-            'text' => 'Section Services',
-            // 'url' => '/admin/services',
-            'icon' => 'far fa-question-circle'
-        ],
-        [
             'text' => 'Section Subscribe',
             'url' => '/admin/subscribe',
             'icon' => 'far fa-question-circle'
@@ -246,6 +241,11 @@ return [
             'text' => 'Portfolio',
             // 'url' => '/admin/portfolio',
             'icon' => 'fas fa-images'
+        ],
+        [
+            'text' => 'Services',
+            'url' => '/admin/services',
+            'icon' => 'fas fa-concierge-bell'
         ],
         [
             'text' => 'Testimonials',

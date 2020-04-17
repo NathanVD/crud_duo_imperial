@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Subscribe;
+use App\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,9 @@ use App\Subscribe;
 Route::get('/', function () {
 
     $subscribeLink = Subscribe::find(1);
+    $services = Service::all();
 
-    return view('index',compact('subscribeLink'));
+    return view('index',compact('subscribeLink','services'));
 });
 
 Route::get('/admin', function () {
@@ -28,3 +30,6 @@ Route::get('/admin', function () {
 //Subscribe (admin)
 Route::get('/admin/subscribe', 'SubscribeController@edit')->name('subscribe');
 Route::post('/admin/subscribe/update', 'SubscribeController@update')->name('subscribe.update');
+
+//Services (admin)
+Route::resource('/admin/services', 'ServiceController');
