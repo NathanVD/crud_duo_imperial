@@ -21,7 +21,7 @@
         </div>
 
         <div class="card-footer">
-          <button type="submit" class="btn btn-primary">Valider</button>
+          <button type="submit" class="btn btn-info">Valider</button>
         </div>
 
       </form>

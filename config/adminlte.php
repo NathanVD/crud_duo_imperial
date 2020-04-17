@@ -221,6 +221,11 @@ return [
 
         ['header' => 'Personnalisation du site'],
         [
+            'text' => 'Sections captions',
+            'url' => '/admin/captions',
+            'icon' => 'far fa-question-circle'
+        ],
+        [
             'text' => 'Section Hero',
             // 'url' => '/admin/header',
             'icon' => 'far fa-question-circle'

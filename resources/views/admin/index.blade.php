@@ -9,21 +9,6 @@
 @section('content')
 
   <div class="row mt-5">
-    <div class="col-lg-3 col-6">
-      {{-- Nombre d'images dans le portfolio --}}
-      <div class="small-box bg-primary">
-        <div class="inner">
-          <h3>x</h3>
-          <p>Projects in the portfolio</p>
-        </div>
-        <div class="icon">
-          <i class="fas fa-images"></i>
-        </div>
-        <a href="#" class="small-box-footer">
-          Plus d'infos <i class="fas fa-arrow-circle-right"></i>
-        </a>
-      </div>
-    </div>
 
     <div class="col-lg-3 col-6">
       {{-- Nombre de messages dans l'inbox --}}
@@ -36,7 +21,55 @@
           <i class="fas fa-envelope"></i>
         </div>
         <a href="#" class="small-box-footer">
-          Plus d'infos <i class="fas fa-arrow-circle-right"></i>
+          More info <i class="fas fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+  
+    <div class="col-lg-3 col-6">
+      {{-- Nombre d'images dans le portfolio --}}
+      <div class="small-box bg-primary">
+        <div class="inner">
+          <h3>x</h3>
+          <p>Projects in the portfolio</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-images"></i>
+        </div>
+        <a href="#" class="small-box-footer">
+          More info <i class="fas fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+      {{-- Nombre de services --}}
+      <div class="small-box bg-primary">
+        <div class="inner">
+          <h3>{{$services_count}}</h3>
+          <p>Services</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-concierge-bell"></i>
+        </div>
+        <a href="#" class="small-box-footer">
+          More info <i class="fas fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+      {{-- Nombre de témoignages --}}
+      <div class="small-box bg-primary">
+        <div class="inner">
+          <h3>{{$testimonials_count}}</h3>
+          <p>Testimonials</p>
+        </div>
+        <div class="icon">
+          <i class="far fa-comments"></i>
+        </div>
+        <a href="#" class="small-box-footer">
+          More info <i class="fas fa-arrow-circle-right"></i>
         </a>
       </div>
     </div>

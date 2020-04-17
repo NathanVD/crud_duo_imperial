@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <h3 class="section-title">Our Services</h3>
         <div class="section-title-divider"></div>
-        <p class="section-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        <p class="section-description">{{$captions ? $captions->services : 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}}</p>
       </div>
     </div>
 

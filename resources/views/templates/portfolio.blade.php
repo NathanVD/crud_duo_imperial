@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <h3 class="section-title">Portfolio</h3>
         <div class="section-title-divider"></div>
-        <p class="section-description">Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec dicturum fuisse</p>
+        <p class="section-description">{{$captions ? $captions->portfolio : 'Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec dicturum fuisse'}}</p>
       </div>
     </div>
 
