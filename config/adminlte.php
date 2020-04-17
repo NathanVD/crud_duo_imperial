@@ -222,7 +222,7 @@ return [
         ['header' => 'Personnalisation du site'],
         [
             'text' => 'Section Hero',
-            // 'url' => '/admin/header',
+            'url' => '/admin/hero',
             'icon' => 'far fa-question-circle'
         ],
         [

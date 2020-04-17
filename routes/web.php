@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Hero;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $hero = Hero::find(1);
+    return view('index', compact('hero'));
 });
 
 Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin');
+
+//Hero (admin)
+//Route::resource('/admin/hero', 'HeroController');
+
+Route::get('/admin/hero', 'HeroController@edit')->name('hero');
+Route::post('/admin/hero/update', 'HeroController@update')->name('hero.update');

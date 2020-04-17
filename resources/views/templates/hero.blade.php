@@ -1,4 +1,4 @@
-<section id="hero">
+<section id="hero" style="background: url({{$hero ? asset('storage/'.$hero->img) : '../img/hero-bg.jpg'}}) top center">
   <div class="hero-container">
     <div class="wow fadeIn">
       <div class="hero-logo">
