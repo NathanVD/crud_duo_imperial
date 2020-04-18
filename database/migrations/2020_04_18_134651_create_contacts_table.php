@@ -19,7 +19,8 @@ class CreateContactsTable extends Migration
             $table->string('adress2',50);
             $table->string('email',50);
             $table->string('phone',20);
-            $table->timestamps();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

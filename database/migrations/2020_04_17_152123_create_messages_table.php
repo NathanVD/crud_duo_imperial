@@ -19,6 +19,7 @@ class CreateMessagesTable extends Migration
             $table->string('email',50);
             $table->string('subject',50);
             $table->text('message');
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }

@@ -16,6 +16,7 @@ class CreateSubscribeTable extends Migration
         Schema::create('subscribe', function (Blueprint $table) {
             $table->id();
             $table->string('link',150);
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }

@@ -21,6 +21,7 @@ class CreateCaptionsTable extends Migration
             $table->string('testimonials',100);
             $table->string('team',100);
             $table->string('contact',100);
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
