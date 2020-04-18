@@ -38,7 +38,10 @@
         </div>
 
         <div class="card-footer">
-          <button type="submit" class="btn btn-info">Submit</button>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <a href="{{route('admin')}}" class="btn btn-secondary">Cancel</a>
+          </div>
         </div>
 
       </form>

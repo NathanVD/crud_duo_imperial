@@ -35,9 +35,12 @@ Route::get('/admin', function () {
     $testimonials_count = Testimonial::count();
     $services_count = Service::count();
     $messages_count = Message::count();
+
+    $last_testimonial = Testimonial::latest('created_at')->first();
+    $last_service = Service::latest('created_at')->first();
     $last_message = Message::latest('created_at')->first();
 
-    return view('admin.index',compact('testimonials_count','services_count','messages_count','last_message'));
+    return view('admin.index',compact('testimonials_count','services_count','messages_count','last_testimonial','last_service','last_message'));
 })->name('admin');
 
 //Subscribe (admin)
