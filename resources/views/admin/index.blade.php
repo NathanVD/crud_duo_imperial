@@ -14,13 +14,18 @@
       {{-- Nombre de messages dans l'inbox --}}
       <div class="small-box bg-primary">
         <div class="inner">
-          <h3>x</h3>
-          <p>Messages</p>
+          <h3>{{$messages_count}}</h3>
+          <p class="{{$messages_count != 0 ? 'm-0' : ''}}">Messages</p>
+          @if ($messages_count != 0)
+            <p><small>Last received : {{$last_message->created_at}}</small></p>
+          @endif
         </div>
         <div class="icon">
           <i class="fas fa-envelope"></i>
         </div>
-        <a href="#" class="small-box-footer">
+        <div>
+        </div>
+        <a href="{{route('messages.index')}}" class="small-box-footer">
           More info <i class="fas fa-arrow-circle-right"></i>
         </a>
       </div>
@@ -52,7 +57,7 @@
         <div class="icon">
           <i class="fas fa-concierge-bell"></i>
         </div>
-        <a href="#" class="small-box-footer">
+        <a href="{{route('services.index')}}" class="small-box-footer">
           More info <i class="fas fa-arrow-circle-right"></i>
         </a>
       </div>
@@ -68,7 +73,7 @@
         <div class="icon">
           <i class="far fa-comments"></i>
         </div>
-        <a href="#" class="small-box-footer">
+        <a href="{{route('testimonials.index')}}" class="small-box-footer">
           More info <i class="fas fa-arrow-circle-right"></i>
         </a>
       </div>

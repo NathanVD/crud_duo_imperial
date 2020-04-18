@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubscribeTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateSubscribeTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscribe', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('link',150);
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('adress1',50);
+            $table->string('adress2',50);
+            $table->string('email',50);
+            $table->string('phone',20);
+            $table->timestamps();
         });
     }
 
@@ -27,6 +30,6 @@ class CreateSubscribeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscribe');
+        Schema::dropIfExists('contacts');
     }
 }

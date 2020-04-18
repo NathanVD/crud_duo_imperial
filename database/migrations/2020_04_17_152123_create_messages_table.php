@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCaptionsTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateCaptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('captions', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->string('about',100);
-            $table->string('services',100);
-            $table->string('portfolio',100);
-            $table->string('testimonials',100);
-            $table->string('team',100);
-            $table->string('contact',100);
+            $table->string('name',50);
+            $table->string('email',50);
+            $table->string('subject',50);
+            $table->text('message');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
@@ -32,6 +30,6 @@ class CreateCaptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('captions');
+        Schema::dropIfExists('messages');
     }
 }

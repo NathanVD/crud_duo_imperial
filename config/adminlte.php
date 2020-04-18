@@ -240,6 +240,11 @@ return [
             'url' => '/admin/subscribe',
             'icon' => 'far fa-question-circle'
         ],
+        [
+            'text' => 'Section Contact',
+            'url' => '/admin/contact',
+            'icon' => 'far fa-question-circle'
+        ],
         
         ['header' => 'CRUD'],
         [
@@ -261,7 +266,7 @@ return [
         ['header' => 'Messages'],
         [
             'text' => 'Voir les messages',
-            // 'url' => '/admin/message',
+            'url' => '/admin/messages',
             'icon' => 'fas fa-envelope'
         ],
     ],

@@ -19,7 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('link',150);
             $table->string('title',50);
             $table->text('description');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

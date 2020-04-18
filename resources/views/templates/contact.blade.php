@@ -13,17 +13,17 @@
         <div class="info">
           <div>
             <i class="fa fa-map-marker-alt"></i>
-            <p>A108 Adam Street<br>New York, NY 535022</p>
+            <p>{{$contact ? $contact->adress1 : 'A108 Adam Street'}}<br>{{$contact ? $contact->adress2 : 'New York, NY 535022'}}</p>
           </div>
 
           <div>
             <i class="fa fa-envelope"></i>
-            <p>info@example.com</p>
+            <p>{{$contact ? $contact->email : 'info@example.com'}}</p>
           </div>
 
           <div>
             <i class="fa fa-phone"></i>
-            <p>+1 5589 55488 55s</p>
+            <p>{{$contact ? $contact->phone : '+1 5589 55488 55s'}}</p>
           </div>
 
         </div>
@@ -33,7 +33,8 @@
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="{{route('messages.store')}}" method="post" role="form" class="contactForm" autocomplete="off">
+            @csrf
             <div class="form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
               <div class="validation"></div>
