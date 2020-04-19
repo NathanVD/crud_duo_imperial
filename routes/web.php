@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Hero;
 use App\About;
+use App\Team;
+use App\Portfolio;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,10 @@ use App\About;
 Route::get('/', function () {
     $about = About::find(1);
     $hero = Hero::find(1);
-    return view('index', compact('hero', 'about'));
+    $team = Team::All();
+    $portfolios = Portfolio::All();
+    return view('index', compact('hero', 'about', 'team'));
+    return view('portfolio', compact('portfolio'));
 });
 
 Route::get('/admin', function () {
@@ -33,3 +38,7 @@ Route::post('/admin/hero/update', 'HeroController@update')->name('hero.update');
 
 Route::get('/admin/about', 'AboutController@edit')->name('about');
 Route::post('/admin/about/update', 'AboutController@update')->name('about.update');
+
+Route::resource('/admin/team', 'TeamController');
+
+Route::resource('admin/portfolio', 'PortfolioController');

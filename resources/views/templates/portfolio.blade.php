@@ -8,6 +8,7 @@
       </div>
     </div>
 
+    @foreach ($portfolios as $portfolio)
     <div class="row">
       <div class="col-md-3">
         <a class="portfolio-item" style="background-image: url(img/portfolio-1.jpg);" href="">
@@ -15,72 +16,12 @@
             <h4>Portfolio 1</h4>
             <span>Alored dono par</span>
           </div>
+          <img src="{{asset($portfolio->img)}}" class="img-fluid" alt="">
         </a>
       </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-2.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 2</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-3.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 3</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-4.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 4</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-5.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 5</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-6.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 6</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-7.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 7</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a class="portfolio-item" style="background-image: url(img/portfolio-8.jpg);" href="">
-          <div class="details">
-            <h4>Portfolio 8</h4>
-            <span>Alored dono par</span>
-          </div>
-        </a>
-      </div>
-
     </div>
+    @endforeach
+
+
   </div>
 </section>

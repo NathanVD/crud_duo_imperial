@@ -240,11 +240,16 @@ return [
             // 'url' => '/admin/subscribe',
             'icon' => 'far fa-question-circle'
         ],
+        [
+            'text' => 'Section Our team',
+            'url' => '/admin/team',
+            'icon' => 'far fa-question-circle'
+        ],
         
         ['header' => 'CRUD'],
         [
             'text' => 'Portfolio',
-            // 'url' => '/admin/portfolio',
+            'url' => '/admin/portfolio',
             'icon' => 'fas fa-images'
         ],
         [
