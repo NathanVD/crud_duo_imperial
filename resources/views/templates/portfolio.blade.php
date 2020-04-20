@@ -85,9 +85,9 @@
         @foreach ($portfolios as $portfolio)
           <div class="col-md-3">
             <a class="portfolio-item" style="background-image: url({{asset('storage/'.$portfolio->img)}});" href="">
-              <div class="details">
-                <h4>Portfolio 1</h4>
-                <span>Alored dono par</span>
+              <div class="details p-1">
+                <h4>{{$portfolio->nom}}</h4>
+                <span>{{$portfolio->description}}</span>
               </div>
               {{-- <img src="{{asset('storage/'.$portfolio->img)}}" class="img-fluid" alt=""> --}}
             </a>
