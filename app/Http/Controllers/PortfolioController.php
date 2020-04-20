@@ -113,4 +113,16 @@ class PortfolioController extends Controller
 
         return redirect()->route('portfolio.index');
     }
+
+    /**
+     * Display a listing of the resource containing the specified search term.
+     */
+    public function search(Request $request)
+    {
+        $search = request('search');
+
+        $projects = Portfolio::where('nom','LIKE',"%{$search}%")->get();//->orWhere('description','LIKE','%'.$project.'%')->get();
+        
+        return view('admin.portfolio.search_result',compact('search','projects'));//->withDetails($project)->withQuery($search);
+    }
 }

@@ -6,7 +6,7 @@
         <div class="card card-success">
 
             <div class="card-header">
-            <h3 class="card-title">New testimonial</h3>
+                <h3 class="card-title">New testimonial</h3>
             </div>
 
             <form action="{{route('portfolio.store')}}" method="POST" enctype="multipart/form-data">

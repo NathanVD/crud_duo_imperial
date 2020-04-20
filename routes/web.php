@@ -55,6 +55,14 @@ Route::get('/admin', function () {
     return view('admin.index',compact('testimonials_count','services_count','messages_count','portfolios_count','last_testimonial','last_service','last_message','last_portfolio'));
 })->name('admin');
 
+// Route::any('/search', function (Request $request) {
+
+//     $search = request('search');
+
+//     $projects = Portfolio::where('nom','LIKE',"%{$search}%")->get();//->orWhere('description','LIKE','%'.$project.'%')->get();
+    
+//     return view('admin.portfolio.search_result',compact('search','projects'));//->withDetails($project)->withQuery($search);
+// }); 
 
 //routes antoine
 //Hero (admin)
@@ -66,6 +74,7 @@ Route::post('/admin/about/update', 'AboutController@update')->name('about.update
 
 Route::resource('/admin/team', 'TeamController');
 
+Route::post('/admin/portfolio/search', 'PortfolioController@search')->name('portfolio.search');
 Route::resource('admin/portfolio', 'PortfolioController');
 
 //routes nathan

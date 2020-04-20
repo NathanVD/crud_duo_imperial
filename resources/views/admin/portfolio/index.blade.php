@@ -5,6 +5,19 @@
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Portfolio List <a href="{{route('portfolio.create')}}" class="badge bg-success align-top ml-3">Add <i class="fas fa-plus"></i></a></h3>
+            
+            <div class="card-tools">
+                <form  action="{{route('portfolio.search')}}" method="POST" role="search" class="input-group input-group-sm" style="width: 200px;">
+                    @csrf
+                    <input type="text" name="search" class="form-control float-right" placeholder="Search project name">
+
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+
+                </form>
+            </div>
+
         </div>
 
         <div class="card-body table-responsive p-0">
