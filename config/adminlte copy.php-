@@ -227,12 +227,12 @@ return [
         ],
         [
             'text' => 'Section Hero',
-            'url' => '/admin/hero',
+            // 'url' => '/admin/header',
             'icon' => 'far fa-question-circle'
         ],
         [
             'text' => 'Section About',
-            'url' => '/admin/about',
+            // 'url' => '/admin/about',
             'icon' => 'far fa-question-circle'
         ],
         [
@@ -245,16 +245,11 @@ return [
             'url' => '/admin/contact',
             'icon' => 'far fa-question-circle'
         ],
-        [
-            'text' => 'Section Our team',
-            'url' => '/admin/team',
-            'icon' => 'far fa-question-circle'
-        ],
         
         ['header' => 'CRUD'],
         [
             'text' => 'Portfolio',
-            'url' => '/admin/portfolio',
+            // 'url' => '/admin/portfolio',
             'icon' => 'fas fa-images'
         ],
         [

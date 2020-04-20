@@ -221,11 +221,6 @@ return [
 
         ['header' => 'Personnalisation du site'],
         [
-            'text' => 'Sections captions',
-            'url' => '/admin/captions',
-            'icon' => 'far fa-question-circle'
-        ],
-        [
             'text' => 'Section Hero',
             'url' => '/admin/hero',
             'icon' => 'far fa-question-circle'
@@ -236,13 +231,13 @@ return [
             'icon' => 'far fa-question-circle'
         ],
         [
-            'text' => 'Section Subscribe',
-            'url' => '/admin/subscribe',
+            'text' => 'Section Services',
+            // 'url' => '/admin/services',
             'icon' => 'far fa-question-circle'
         ],
         [
-            'text' => 'Section Contact',
-            'url' => '/admin/contact',
+            'text' => 'Section Subscribe',
+            // 'url' => '/admin/subscribe',
             'icon' => 'far fa-question-circle'
         ],
         [
@@ -258,20 +253,15 @@ return [
             'icon' => 'fas fa-images'
         ],
         [
-            'text' => 'Services',
-            'url' => '/admin/services',
-            'icon' => 'fas fa-concierge-bell'
-        ],
-        [
             'text' => 'Testimonials',
-            'url' => '/admin/testimonials',
+            // 'url' => '/admin/testimonials',
             'icon' => 'far fa-comments'
         ],
 
         ['header' => 'Messages'],
         [
             'text' => 'Voir les messages',
-            'url' => '/admin/messages',
+            // 'url' => '/admin/message',
             'icon' => 'fas fa-envelope'
         ],
     ],

@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Hero;
-use App\About;
-use App\Team;
-use App\Portfolio;
 use App\Caption;
 use App\Subscribe;
 use App\Service;
@@ -24,20 +20,14 @@ use App\Contact;
 */
 
 Route::get('/', function () {
-
+    
     $captions = Caption::find(1);
     $subscribeLink = Subscribe::find(1);
     $services = Service::all();
     $testimonials = Testimonial::all();
     $contact = Contact::find(1);
 
-    $about = About::find(1);
-    $hero = Hero::find(1);
-    $team = Team::All();
-    $portfolios = Portfolio::All();
-
-    return view('index', compact('hero', 'about', 'team','captions','subscribeLink','services','testimonials','contact'));
-    //return view('portfolio', compact('portfolio'));
+    return view('index',compact('captions','subscribeLink','services','testimonials','contact'));
 });
 
 Route::get('/admin', function () {
@@ -53,22 +43,6 @@ Route::get('/admin', function () {
     return view('admin.index',compact('testimonials_count','services_count','messages_count','last_testimonial','last_service','last_message'));
 })->name('admin');
 
-
-//routes antoine
-//Hero (admin)
-//Route::resource('/admin/hero', 'HeroController');
-
-Route::get('/admin/hero', 'HeroController@edit')->name('hero');
-Route::post('/admin/hero/update', 'HeroController@update')->name('hero.update');
-
-Route::get('/admin/about', 'AboutController@edit')->name('about');
-Route::post('/admin/about/update', 'AboutController@update')->name('about.update');
-
-Route::resource('/admin/team', 'TeamController');
-
-Route::resource('admin/portfolio', 'PortfolioController');
-
-//routes nathan
 //Subscribe (admin)
 Route::get('/admin/subscribe', 'SubscribeController@edit')->name('subscribe');
 Route::post('/admin/subscribe/update', 'SubscribeController@update')->name('subscribe.update');
