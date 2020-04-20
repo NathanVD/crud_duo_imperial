@@ -7,7 +7,8 @@ require("superfish");
 global.Morphext = require("morphext/dist/morphext.min.js");
 global.WOW = require("wow.js");
 require("jquery-sticky");
-require("easing");
+require("jquery-ui");
+require("jquery.easing");
 require("@fortawesome/fontawesome-free/js/all.js");
 
 require("./custom");
