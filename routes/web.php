@@ -36,7 +36,7 @@ Route::get('/', function () {
     $team = Team::All();
     $portfolios = Portfolio::All();
 
-    return view('index', compact('hero', 'about', 'team','captions','subscribeLink','services','testimonials','contact'));
+    return view('index', compact('hero', 'about', 'team','captions','subscribeLink','services','testimonials','contact','portfolios'));
     //return view('portfolio', compact('portfolio'));
 });
 
@@ -45,19 +45,19 @@ Route::get('/admin', function () {
     $testimonials_count = Testimonial::count();
     $services_count = Service::count();
     $messages_count = Message::count();
+    $portfolios_count = Portfolio::count();
 
     $last_testimonial = Testimonial::latest('created_at')->first();
     $last_service = Service::latest('created_at')->first();
     $last_message = Message::latest('created_at')->first();
+    $last_portfolio = Portfolio::latest('created_at')->first();
 
-    return view('admin.index',compact('testimonials_count','services_count','messages_count','last_testimonial','last_service','last_message'));
+    return view('admin.index',compact('testimonials_count','services_count','messages_count','portfolios_count','last_testimonial','last_service','last_message','last_portfolio'));
 })->name('admin');
 
 
 //routes antoine
 //Hero (admin)
-//Route::resource('/admin/hero', 'HeroController');
-
 Route::get('/admin/hero', 'HeroController@edit')->name('hero');
 Route::post('/admin/hero/update', 'HeroController@update')->name('hero.update');
 

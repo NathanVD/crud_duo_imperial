@@ -37,10 +37,10 @@
       <div class="small-box bg-primary">
         <div class="inner">
           <div class="mb-4">
-            <h3 class="d-inline mr-3">X</h3>
+            <h3 class="d-inline mr-3">{{$portfolios_count}}</h3>
             <h5 class="d-inline">Projects</h5> 
           </div>
-          <p class="mb-0"><small>Last added : ---</small></p>
+          <p class="mb-0"><small>Last added : {{$portfolios_count != 0 ? $last_portfolio->created_at : '---'}}</small></p>
         </div>
         <div class="icon">
           <i class="fas fa-images"></i>

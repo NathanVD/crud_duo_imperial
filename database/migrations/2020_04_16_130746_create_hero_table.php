@@ -13,7 +13,7 @@ class CreateHeroTable extends Migration
      */
     public function up()
     {
-        Schema::create('Hero', function (Blueprint $table) {
+        Schema::create('hero', function (Blueprint $table) {
             $table->id();
             $table->string('img', 150);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateHeroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Hero');
+        Schema::dropIfExists('hero');
     }
 }

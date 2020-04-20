@@ -13,13 +13,13 @@ class CreateAboutTable extends Migration
      */
     public function up()
     {
-        Schema::create('About', function (Blueprint $table) {
+        Schema::create('about', function (Blueprint $table) {
             $table->id();
             $table->string('titre', 150);
             $table->string('image', 150);
-            $table->string('description1', 150);
-            $table->string('description2', 150);
-            $table->string('description3', 150);
+            $table->text('description1');
+            $table->text('description2');
+            $table->text('description3');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateAboutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('About');
+        Schema::dropIfExists('about');
     }
 }

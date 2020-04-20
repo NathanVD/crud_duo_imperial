@@ -4,7 +4,7 @@
 
     <div class="container">
         <h1 class="text-center">Ajout portfolio</h1>
-            <form action="{{route('admin.portfolio.update', $portfolio->id)}}" method="post">
+            <form action="{{route('portfolio.update', $portfolio->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             @method('put')
             <div class="form-group">
@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label for="">Image</label>
-                <input type="text" name="img" id="img" class="form-control" value="{{$portfolio->img}}">
+                <input type="file" name="img" id="img" class="form-control-file">
             </div>
             <div class="form-group">
                 <label for="">Description</label>

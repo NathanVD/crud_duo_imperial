@@ -40,13 +40,13 @@ class TeamController extends Controller
     {
         $team = new Team();
 
-        $team->image = request('image');
+        $team->image = request('image')->store('img');
         $team->nom = request('nom');
         $team->poste = request('poste');
 
         $team->save();
 
-        return redirect()->route('admin');
+        return redirect()->route('team.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class TeamController extends Controller
     {
         $team = Team::find($id);
 
-        return view('team.edit', compact('team'));
+        return view('admin.team.edit', compact('team'));
     }
 
     /**
@@ -86,7 +86,7 @@ class TeamController extends Controller
 
         if(request('$team->image')){
             Storage::delete('$team->image');
-            $team->image = request('image');
+            $team->image = request('image')->store('img');
         }
 
         $team->nom = request('nom');

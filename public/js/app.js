@@ -44460,35 +44460,9 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! C:\Users\Antoine\Desktop\Laravel\Crud_duo\crud_duo_imperial\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Antoine\Desktop\Laravel\Crud_duo\crud_duo_imperial\resources\sass\app.scss */"./resources/sass/app.scss");
-
-
-/***/ }),
-
-/***/ 1:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 2:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-=======
 __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/sass/app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! /var/www/html/crud_duo_imperial/resources/sass/admin_custom.sass */"./resources/sass/admin_custom.sass");
->>>>>>> Nathan
 
 
 /***/ })

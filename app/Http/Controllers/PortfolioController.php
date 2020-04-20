@@ -17,7 +17,7 @@ class PortfolioController extends Controller
     {
         $portfolios = Portfolio::all();
 
-        return view('portfolio.index', compact('portolfios'));
+        return view('admin.portfolio.index', compact('portfolios'));
     }
 
     /**
@@ -27,7 +27,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('portfolio.create');
+        return view('admin.portfolio.create');
     }
 
     /**
@@ -41,12 +41,12 @@ class PortfolioController extends Controller
         $portfolio = new Portfolio();
 
         $portfolio->nom = request('nom');
-        $portfolio->img = request('img');
+        $portfolio->img = request('img')->store('img');
         $portfolio->description = request('description');
 
         $portfolio->save();
 
-        return redirect()->route('admin.porfoltio.index');
+        return redirect()->route('portfolio.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class PortfolioController extends Controller
     {
         $portfolio = Portfolio::find($id);
 
-        return voew('admin.portfolio.edit', compact('portfolio'));
+        return view('admin.portfolio.edit', compact('portfolio'));
     }
 
     /**
@@ -90,12 +90,12 @@ class PortfolioController extends Controller
         }
 
         $portfolio->nom = request('nom');
-        $portfolio->img = request('img');
+        $portfolio->img = request('img')->store('img');
         $portfolio->description = request('description');
 
         $portfolio->save();
 
-        return redirect()->route('admin');
+        return redirect()->route('admin.portfolio.index');
     }
 
     /**
@@ -106,6 +106,12 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $portfolio = Portfolio::find($id);
+
+        Storage::delete($portfolio->img);
+
+        $portfolio->delete();
+
+        return redirect()->route('testimonials.index');
     }
 }

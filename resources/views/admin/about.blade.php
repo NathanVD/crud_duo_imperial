@@ -13,7 +13,7 @@
             </div>
             <div class="d-flex justify-content-around mt-2">
                 <p class="d-flex align-items-center">Titre</p>
-                <textarea name="titre" id="titre" cols="60" rows="5"></textarea>
+                <input type="text" name="titre" id="image">
             </div>
             <div class="d-flex justify-content-around mt-2">
                 <p class="d-flex align-items-center">Partie 1</p>

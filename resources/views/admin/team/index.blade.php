@@ -15,17 +15,30 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($teams as $team)
-                <tr>
-                    <td><img src="{{$team->image}}" /></td>
-                    <td>{{$team->nom}}</td>
-                    <td>{{$team->poste}}</td>
-                    <td>
-                        <button class="btn btn-warning">Modifier</button>
-                        <button class="btn btn-danger">Supprimer</button>
-                    </td>
-                </tr>
-            @endforeach
+            @if ($teams->isEmpty())
+                
+            @else
+                @foreach ($teams as $team)
+                    <tr>
+                        <td><img src="{{asset('storage/'.$team->image)}}" /></td>
+                        <td>{{$team->nom}}</td>
+                        <td>{{$team->poste}}</td>
+                        <td>
+                            <a href="{{route('team.edit',$team->id)}}" class="btn btn-info">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="{{route('team.destroy',$team->id)}}" method="POST" class="d-inline-block">
+                        @csrf
+                        @method('delete')
+                        <button class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </form>
+                        </td>
+                    </tr>
+                @endforeach   
+            @endif
+            
         </tbody>
     </div>
 

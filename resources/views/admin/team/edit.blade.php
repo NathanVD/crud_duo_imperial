@@ -6,7 +6,7 @@
         <h1 class="text-center">Modification Team</h1>
         <form action="{{route('team.update', $team->id)}}" method="post" enctype="multipart/form-data">
             @csrf
-            @method('post')
+            @method('put')
             <div class="d-flex mt-5">
                 <div>
                     <p>N°1</p>
