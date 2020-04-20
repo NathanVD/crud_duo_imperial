@@ -84,18 +84,17 @@ class PortfolioController extends Controller
     {
         $portfolio = Portfolio::find($id);
 
-        if(request('image')){
+        if(request('img')){
             Storage::delete($portfolio->img);
-            $portfolio->image = request('image')->store('img');
+            $portfolio->img = request('img')->store('img');
         }
 
         $portfolio->nom = request('nom');
-        $portfolio->img = request('img')->store('img');
         $portfolio->description = request('description');
 
         $portfolio->save();
 
-        return redirect()->route('admin.portfolio.index');
+        return redirect()->route('portfolio.index');
     }
 
     /**
@@ -112,6 +111,6 @@ class PortfolioController extends Controller
 
         $portfolio->delete();
 
-        return redirect()->route('testimonials.index');
+        return redirect()->route('portfolio.index');
     }
 }

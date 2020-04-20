@@ -31,8 +31,10 @@ class AboutController extends Controller
         }
 
         if(request('image')){
-            Storage::delete($about->img);
+            Storage::delete($about->image);
             $about->image = request('image')->store('img');
+        } else {
+            $about->image = 'img/about-img.jpg';
         }
 
         $about->titre = request('titre');

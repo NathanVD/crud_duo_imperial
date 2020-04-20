@@ -19,12 +19,14 @@
         <div class="card-body">
 
           <div class="row">
+
             <div class="col d-flex align-items-center">
               <div class="form-group">
                 <label for="picture">Picture</label>
                 <input type="file" name="picture" id="picture" class="form-control-file">
               </div>
             </div>
+            
             <div class="col">
               <div class="thumbnail-frame img-thumbnail rounded-circle float-right">
                 <img src="{{asset('storage/'.$testimonial->img_path)}}" class="thumbnail" alt="Current Picture">
@@ -35,17 +37,17 @@
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control" value="{{$testimonial->name}}">
+            <input type="text" name="name" id="name" class="form-control" value="{{$testimonial->name}}" required>
           </div>
 
           <div class="form-group">
             <label for="company">Company</label>
-            <input type="text" name="company" id="company" class="form-control" value="{{$testimonial->company}}">
+            <input type="text" name="company" id="company" class="form-control" value="{{$testimonial->company}}" required>
           </div>
 
           <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea name="quote" id="quote" class="form-control" rows="4" maxlength="150"> {{$testimonial->quote}} </textarea>
+            <textarea name="quote" id="quote" class="form-control" rows="4" maxlength="150" required>{{$testimonial->quote}} </textarea>
           </div>
 
         </div>

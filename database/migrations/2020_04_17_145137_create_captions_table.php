@@ -15,12 +15,12 @@ class CreateCaptionsTable extends Migration
     {
         Schema::create('captions', function (Blueprint $table) {
             $table->id();
-            $table->string('about',100);
-            $table->string('services',100);
-            $table->string('portfolio',100);
-            $table->string('testimonials',100);
-            $table->string('team',100);
-            $table->string('contact',100);
+            $table->string('about',200)->nullable();
+            $table->string('services',200)->nullable();
+            $table->string('portfolio',200)->nullable();
+            $table->string('testimonials',200)->nullable();
+            $table->string('team',200)->nullable();
+            $table->string('contact',200)->nullable();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });

@@ -16,7 +16,7 @@
         <div class="card-body">
           <div class="form-group">
             <label for="link">Link :</label>
-            <input name="link" class="form-control" id="link" value="{{$prevLink ? $prevLink->link : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}}">
+            <input name="link" class="form-control" id="link" value="{{$prevLink ? $prevLink->link : ''}}" required>
           </div>
         </div>
 

@@ -18,8 +18,8 @@ class CreateAboutTable extends Migration
             $table->string('titre', 150);
             $table->string('image', 150);
             $table->text('description1');
-            $table->text('description2');
-            $table->text('description3');
+            $table->text('description2')->nullable();
+            $table->text('description3')->nullable();
             $table->timestamps();
         });
     }

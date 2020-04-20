@@ -16,22 +16,22 @@
 
           <div class="form-group">
             <label for="picture">Picture</label>
-            <input type="file" name="picture" id="picture" class="form-control-file">
+            <input type="file" name="picture" id="picture" class="form-control-file" required>
           </div>
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control">
+            <input type="text" name="name" id="name" class="form-control" required>
           </div>
 
           <div class="form-group">
             <label for="company">Company</label>
-            <input type="text" name="company" id="company" class="form-control">
+            <input type="text" name="company" id="company" class="form-control" required>
           </div>
 
           <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea name="quote" id="quote" class="form-control" rows="4" maxlength="150"></textarea>
+            <textarea name="quote" id="quote" class="form-control" rows="4" maxlength="150" required></textarea>
           </div>
 
         </div>

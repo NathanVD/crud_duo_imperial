@@ -12,7 +12,7 @@
     <div class="row">
 
       <div class="col-lg-6 about-img">
-        <img src="{{$about ? asset('storage/'.$about->image) : 'img/about-img.jpg'}}" alt="">
+        <img src="{{$about ? ($about->image === 'img/about-img.jpg') ? asset($about->image) : asset('storage/'.$about->image) : 'img/about-img.jpg'}}" alt="">
       </div>
 
       <div class="col-md-6 about-content">

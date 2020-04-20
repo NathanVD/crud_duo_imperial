@@ -20,23 +20,23 @@
         <div class="card-body">
 
           <div class="form-group">
-            <label for="icon">Icon</label>
-            <input type="text" name="icon" id="icon" class="form-control" value="{{$service->icon}}">
+            <label for="icon">Icon <a href="https://fontawesome.com/icons?d=gallery&m=free" title="FontAwesome"><i class="fab fa-font-awesome-flag"></i></a></label>
+            <input type="text" name="icon" id="icon" class="form-control" value="{{$service->icon}}" required>
           </div>
 
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" name="title" id="title" class="form-control" value="{{$service->title}}">
+            <input type="text" name="title" id="title" class="form-control" value="{{$service->title}}" required>
           </div>
 
           <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="description" id="description" class="form-control" rows="4" maxlength="150">{{$service->description}}</textarea>
+            <textarea name="description" id="description" class="form-control" rows="4" maxlength="150" required>{{$service->description}}</textarea>
           </div>
 
           <div class="form-group">
             <label for="link">Link</label>
-            <input type="text" name="link" id="link" class="form-control" value="{{$service->link}}">
+            <input type="text" name="link" id="link" class="form-control" value="{{$service->link}}" required>
           </div>
 
         </div>
